@@ -1,0 +1,7 @@
+<ng-container *ngIf="categories$ | async as items">
+  <form [formGroup]="categoriesFormGroup">
+    <div *ngFor="let item of items">
+      <input type="checkbox" [formControlName]="item.id">{{item.name}}
+    </div>
+  </form>
+</ng-container>

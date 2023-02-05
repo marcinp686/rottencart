@@ -7,9 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { ReactiveFormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms'
+import { CategoriesFilterComponent } from './components/categories-filter/categories-filter.component';
+import { HomeComponent } from './components/home/home.component';
+import { StoresFilterComponent } from './components/stores-filter/stores-filter.component';
+import { PriceFilterComponent } from './components/price-filter/price-filter.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CategoriesFilterComponent, HomeComponent, StoresFilterComponent, PriceFilterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -18,6 +24,8 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     CollapseModule,
     CommonModule,
     RouterModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

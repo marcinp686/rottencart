@@ -1,0 +1,9 @@
+<app-categories-filter></app-categories-filter>
+<ng-container *ngIf="categoriesFilter$ | async as item">{{item}}</ng-container>
+<br>
+<app-stores-filter></app-stores-filter>
+<ng-container *ngIf="storesFilter$ | async as item">{{item}}</ng-container>
+<br>
+<app-price-filter></app-price-filter>
+<ng-container *ngIf="priceFromFilter$ | async as item">From {{item}}</ng-container>
+<ng-container *ngIf="priceToFilter$ | async as item">To {{item}}</ng-container>
